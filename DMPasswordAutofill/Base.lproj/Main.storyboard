@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eC8-Sm-UUX">
+                                <rect key="frame" x="87.5" y="200" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="17R-Py-K4N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D1o-Y8-imG">
+                                <rect key="frame" x="87.5" y="284" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="dmV-Ya-smD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XMz-GI-MI4">
+                                <rect key="frame" x="87.5" y="368" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="QfL-7p-8wz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XMz-GI-MI4" firstAttribute="top" secondItem="D1o-Y8-imG" secondAttribute="bottom" constant="50" id="Ab2-rp-GmM"/>
+                            <constraint firstItem="XMz-GI-MI4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bTh-pA-art"/>
+                            <constraint firstItem="D1o-Y8-imG" firstAttribute="top" secondItem="eC8-Sm-UUX" secondAttribute="bottom" constant="50" id="bUw-Yf-H3w"/>
+                            <constraint firstItem="eC8-Sm-UUX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mot-V4-M8a"/>
+                            <constraint firstItem="eC8-Sm-UUX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="pMv-dL-6m6"/>
+                            <constraint firstItem="D1o-Y8-imG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qiU-WG-NAf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tfEmail" destination="eC8-Sm-UUX" id="7pS-Q3-UN3"/>
+                        <outlet property="tfNewPassword" destination="D1o-Y8-imG" id="B6w-QM-yOG"/>
+                        <outlet property="tfPassword" destination="XMz-GI-MI4" id="Rnn-OS-5Rc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+</document>
