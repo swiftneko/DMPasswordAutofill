@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *tfNewPassword;
 @property (weak, nonatomic) IBOutlet UITextField *tfPassword;
 
+@property (nonatomic, assign) BOOL finish;
+
 @end
 
 @implementation ViewController
@@ -38,6 +40,23 @@
     _tfPassword.secureTextEntry = YES;
     
 }
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    // 如果是直接返回的，则注册失败，不保存用户名和密码
+    // 如果是通过 Done 按钮 pop 页面，则不清空用户名和密码。Keychain在页面pop的时候会把用户名和密码保存下载
+    if (!_finish) {
+        _tfEmail.text = nil;
+        _tfNewPassword.text = nil;
+        _tfPassword.text = nil;
+    }
+}
+
+- (IBAction)onTapDone:(UIBarButtonItem *)sender {
+    _finish = YES;
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 
 @end
